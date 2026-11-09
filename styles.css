@@ -1,0 +1,224 @@
+/* ==========================================================================
+   ESTILOS INSTITUCIONALES UNSA - GUÍA CACHIMBA 2026-B
+   Color Principal: Guinda UNSA (#800020 / #8B0000)
+   ========================================================================== */
+
+:root {
+    --unsa-guinda: #800020;
+    --unsa-guinda-light: #a52a2a;
+    --unsa-guinda-dark: #500014;
+    --unsa-dorado: #d4af37;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --border-color: #e9ecef;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- CABECERA INSTITUCIONAL --- */
+header {
+    background: linear-gradient(135deg, var(--unsa-guinda-dark) 0%, var(--unsa-guinda) 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.logo-header {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+}
+
+.tag-cachimba {
+    background-color: var(--unsa-dorado);
+    color: #000;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+header h1 {
+    margin: 15px 0 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+    color: #fce8e6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- TARJETAS DE CONTENIDO --- */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 5px solid var(--unsa-guinda);
+}
+
+.card h2 {
+    color: var(--unsa-guinda);
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- ESTILOS DE CONTENEDORES DE IMÁGENES --- */
+.img-container {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--border-color);
+    position: relative;
+}
+
+.img-card {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.img-caption {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Fallback visible si la imagen está corrupta o no existe */
+.img-card:after {
+    content: "🖼️ Adjunta la imagen: " attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #f3e5e8;
+    color: var(--unsa-guinda-dark);
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px dashed var(--unsa-guinda);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+}
+
+/* --- MENSAJES Y ALERTAS ÉTICAS --- */
+.alert-box {
+    background-color: #fff9e6;
+    border-left: 5px solid #ffc107;
+    padding: 14px 18px;
+    font-size: 13px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 15px;
+    color: #5c4300;
+}
+
+.motivational-box {
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 0 8px 8px 0;
+    color: #1b5e20;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- TARJETA OSCURA (MITOS VS REALIDADES) --- */
+.dark-card {
+    background: #1e2229;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-top: 5px solid var(--unsa-dorado);
+}
+
+.dark-card h2 {
+    color: var(--unsa-dorado);
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.mito-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333942;
+}
+
+.mito-item:last-child {
+    border-bottom: none;
+}
+
+/* --- LISTAS Y BOTONES --- */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: var(--unsa-guinda);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: var(--unsa-guinda-light);
+    transform: translateY(-1px);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    background: #ffffff;
+    margin-top: 40px;
+}
